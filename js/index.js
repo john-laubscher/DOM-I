@@ -43,8 +43,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Nav Bar
 const navs = document.querySelectorAll('header nav a');
-// navs.style.color= "green";   // does not work, returns "Uncaught TypeError: Cannot set property 'color' of undefined"
- 
+// navs[0].style.color= "green";   // does not work, returns "Uncaught TypeError: Cannot set property 'color' of undefined"
+ navs.forEach(element => element.style.color= "green");
  
 navs[0].setAttribute('href', "#")
 navs[0].textContent = siteContent["nav"]["nav-item-1"]
